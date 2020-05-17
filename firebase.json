@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "CovidDestroy",
+      "public": "dist/CovidDestroy",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

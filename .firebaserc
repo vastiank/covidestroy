@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "bd-covid": {
+      "hosting": {
+        "CovidDestroy": [
+          "bd-covid"
+        ]
+      }
+    }
+  }
+}

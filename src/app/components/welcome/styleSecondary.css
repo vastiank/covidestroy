@@ -1,0 +1,29 @@
+h2{
+
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  color: #FFF;
+  font-family: teko;
+  font-weight: 400;
+  text-shadow: 5px 5px #5F6D72;
+  text-transform: uppercase;
+  margin-left: 250px;
+}
+
+h5{
+  font-family: Helvetica, Robot, Arial;
+}
+
+
+
+
+#box{
+
+  position: absolute;
+
+}
+
+.container{
+  position: absolute;
+}
