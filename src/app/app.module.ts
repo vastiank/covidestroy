@@ -3,11 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-
-  
-
 
 //Components
 
@@ -18,7 +13,6 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { SendEmailComponent } from './components/send-email/send-email.component';
 import { AuthService } from './services/auth.service';
-import { environment } from 'src/environments/environment';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { SymptomsComponent } from './components/symptoms/symptoms.component';
 import { RealTimeDataComponent } from './components/real-time-data/real-time-data.component';
@@ -47,9 +41,8 @@ import { CareComponent } from './components/care/care.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
+    HttpClientModule
+    
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

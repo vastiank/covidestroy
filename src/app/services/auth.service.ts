@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UsuarioModel } from '../models/usuario.model';
-import { map, first } from 'rxjs/operators';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { User } from 'firebase';
-import { stringify } from 'querystring';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -22,25 +19,12 @@ export class AuthService {
   //https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]
   //INICIAR SESION
   //https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]
-  constructor(private http: HttpClient, public auth: AngularFireAuth) { }
+  constructor(private http: HttpClient) { }
 
-  public user: User
+  
 
   private usuario: UsuarioModel;
 
-  verifyEmailAddress(actionCode){
-
-    this.auth.applyActionCode(actionCode).then( resp => {
-
-      console.log("Verified");
-
-    });    
-  }
-
-  
-
-  
-  
   logOut() {
     localStorage.removeItem('token');
     localStorage.removeItem('expira');
