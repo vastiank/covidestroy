@@ -43,7 +43,7 @@ export class AuthService {
       authData
     ).pipe(
       map(resp => {
-        console.log("Entro en el mapa del rxjs")
+        console.log("Entry")
         this.saveToken(resp['idToken']);
         return resp;
       })
@@ -53,7 +53,6 @@ export class AuthService {
 
   NuevoUsuario(usuario: UsuarioModel) {
 
-    //this.sendVerification();
 
     const authData = {
       ...usuario,

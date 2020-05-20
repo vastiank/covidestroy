@@ -1,0 +1,14 @@
+
+span:hover{
+    transform: scale(1.5);
+}
+
+.modal-footer a:hover{
+    transform: scale(1.2);
+}
+
+
+
+p{
+    cursor: pointer;
+}

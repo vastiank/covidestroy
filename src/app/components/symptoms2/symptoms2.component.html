@@ -1,48 +1,48 @@
 <div class="background">
-    
+
     <div class="container-fluid p-4">
-        <div class="col-2">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="text-left">
-                <button [routerLink]="['/symptoms']" class="btn btn-danger">
+                <button [routerLink]="['/welcome']" class="btn btn-info">
                     <i class="fas fa-arrow-left"></i>
-                    Volver
                 </button>
+                
             </div>
         </div>
     </div>
-    
+
     <div class="limiter animated fadeInLeft">
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90 p-l-50 p-r-50">
                 <span class="login100-form-title p-b-51">
-                    REGISTRO DE CONTACTO
+                    PERFILAMIENTO
                     <i class="fas fa-virus fa-spin"></i>
                 </span>
                 <small class="text-info">A continuacion estan los casos mas relevantes para determinar si <br>
-                se pudo estar en contacto con el virus <br>
-                <br>
-            Seleccione una o varias segun sea su caso. </small>
-            <hr>
-                
+                    se pudo estar en contacto con el virus <br>
+                    <br>
+                    Seleccione una o varias segun sea su caso. </small>
+                <hr>
+
                 <div class="contact100-form-checkbox">
-                    <input 
-                    class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                    <input [(ngModel)]="activeChecked1" (click)="disableNone()" class="input-checkbox100" id="ckb1"
+                        type="checkbox" name="remember-me">
                     <label class="label-checkbox100" for="ckb1">
                         ¿Estuvo en contacto con alguien que tuvo alguno de los sintomas anteriores?
                     </label>
                 </div>
                 <br>
                 <div class="contact100-form-checkbox">
-                    <input 
-                    class="input-checkbox100" id="ckb2" type="checkbox" name="remember-me">
+                    <input (click)="disableNone()" [(ngModel)]="activeChecked2" class="input-checkbox100" id="ckb2"
+                        type="checkbox" name="remember-me">
                     <label class="label-checkbox100" for="ckb2">
                         ¿Hizo un viaje internacional en los ultimos 30 dias?
                     </label>
                 </div>
                 <br>
                 <div class="contact100-form-checkbox">
-                    <input 
-                    class="input-checkbox100" id="ckb3" type="checkbox" name="remember-me">
+                    <input (click)="disableNone()" [(ngModel)]="activeChecked3" class="input-checkbox100" id="ckb3"
+                        type="checkbox" name="remember-me">
                     <label class="label-checkbox100" for="ckb3">
                         ¿Hizo un viaje nacional en los ultimos 30 dias?
                     </label>
@@ -50,8 +50,8 @@
                 <br>
 
                 <div class="contact100-form-checkbox">
-                    <input 
-                    class="input-checkbox100" id="ckb4" type="checkbox" name="remember-me">
+                    <input (click)="disableNone()" [(ngModel)]="activeChecked4" class="input-checkbox100" id="ckb4"
+                        type="checkbox" name="remember-me">
                     <label class="label-checkbox100" for="ckb4">
                         ¿Eres trabajador de la Salud?
                     </label>
@@ -60,8 +60,8 @@
                 <br>
 
                 <div class="contact100-form-checkbox">
-                    <input 
-                    class="input-checkbox100" id="ckb5" type="checkbox" name="remember-me">
+                    <input (click)="disableNone()" [(ngModel)]="activeChecked5" class="input-checkbox100" id="ckb5"
+                        type="checkbox" name="remember-me">
                     <label class="label-checkbox100" for="ckb5">
                         ¿Tuvo algún contacto con personas que no sean de su circulo social (domiciliarios)?
                     </label>
@@ -70,35 +70,23 @@
                 <br>
 
                 <div class="contact100-form-checkbox">
-                    <input 
-                    class="input-checkbox100" id="ckb6" type="checkbox" name="remember-me">
+                    <input [(ngModel)]="noneChecked" (click)="disableAllCheckboxes()" class="input-checkbox100"
+                        id="ckb6" type="checkbox" name="remember-me">
                     <label class="label-checkbox100" for="ckb6">
                         Ninguna de las anteriores
                     </label>
                 </div>
-                
+
 
                 <div class="container-login100-form-btn m-t-17">
                     <button [routerLink]="['/symptoms']" class="login100-form-btn" type="submit">
                         CONTINUAR
                     </button>
                 </div>
-                
+
             </div>
         </div>
     </div>
 
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-

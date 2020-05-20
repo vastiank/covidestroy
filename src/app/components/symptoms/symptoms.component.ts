@@ -16,22 +16,29 @@ export class SymptomsComponent implements OnInit {
   ngOnInit(): void {
 
     
-    this.disabled = true;
+
+    
 
   }
 
-  sintomas = {
-    fiebre: ''
-
-  }
+  activeChecked1: boolean;
+  activeChecked2: boolean;
+  activeChecked3: boolean;
+  activeChecked4: boolean;
+  activeChecked5: boolean;
+  activeChecked6: boolean;
+  activeChecked7: boolean;
+  activeChecked8: boolean;
+  activeChecked9: boolean;
+  noneChecked: boolean;
 
   totalResults: number = 0;
-  sumResults:number = 0;
+  sumResults: number = 0;
 
   //FIEBRE
   ckb1: boolean = false;
   ckFiebre: number = 0;
-  disabled:boolean = false;
+  disabled: boolean = false;
 
   //DOLOR DE GARGANTA
   ckb2: boolean = false;
@@ -71,103 +78,114 @@ export class SymptomsComponent implements OnInit {
 
   fiebre() {
 
+    console.log(this.ckb1)
+
+
     if (!this.ckb1) {
+
       this.ckb1 = true;
+      
       this.ckFiebre = 10;
+      //console.log(this.ckb1);
+      //console.log(this.ckFiebre);
+
     } else {
       this.ckb1 = false;
+      //console.log(this.ckb1);
     }
-    console.log(this.ckb1)
+
+    this.noneChecked = false;
+
   }
 
   garganta() {
 
+    console.log(this.ckb2);
     if (!this.ckb2) {
       this.ckb2 = true;
       this.ckGarganta = 10;
     } else {
       this.ckb2 = false;
     }
-    console.log(this.ckb2)
+
+    this.noneChecked = false;
 
 
   }
 
   congestion() {
 
+
     if (!this.ckb3) {
       this.ckb3 = true;
       this.ckCongestion = 0;
     } else {
-
       this.ckb3 = false;
-
     }
-    console.log(this.ckb3)
+
+    this.noneChecked = false;
+
 
   }
 
   tos() {
 
+
+
+
     if (!this.ckb4) {
       this.ckb4 = true;
       this.ckTos = 10;
     } else {
-
       this.ckb4 = false;
-
     }
-    console.log(this.ckb4)
 
+    this.noneChecked = false;
 
 
   }
 
   dificultad() {
 
+
     if (!this.ckb5) {
       this.ckb5 = true;
       this.ckDificultad = 20;
     } else {
-
       this.ckb5 = false;
-
     }
-    console.log(this.ckb5)
 
+    this.noneChecked = false;
 
 
   }
 
   fatiga() {
 
+
     if (!this.ckb6) {
       this.ckb6 = true;
       this.ckFatiga = 10;
     } else {
-
       this.ckb6 = false;
-
     }
-    console.log(this.ckb6)
 
-
-
+    this.noneChecked = false;
 
 
   }
 
   escalofrio() {
 
+
     if (!this.ckb7) {
       this.ckb7 = true;
       this.ckEscalofrio = 0;
     } else {
-
       this.ckb7 = false;
-
     }
-    console.log(this.ckb7)
+
+    this.noneChecked = false;
 
 
   }
@@ -179,111 +197,126 @@ export class SymptomsComponent implements OnInit {
       this.ckb8 = true;
       this.ckPecho = 20;
     } else {
-
       this.ckb8 = false;
-
     }
-    console.log(this.ckb8)
+
+    this.noneChecked = false;
 
 
   }
 
   incapacidad() {
 
+
     if (!this.ckb9) {
       this.ckb9 = true;
       this.ckIncapacidad = 20;
     } else {
-
       this.ckb9 = false;
-
     }
-    console.log(this.ckb9)
+
+    this.noneChecked = false;
+
+  }
+
+  disableAllCheckboxes() {
 
 
 
+    this.activeChecked1 = false;
+    this.ckFiebre = 0;
 
+    this.activeChecked2 = false;
+    this.ckGarganta = 0;
+
+    this.activeChecked3 = false;
+    this.ckCongestion = 0;
+
+    this.activeChecked4 = false;
+    this.ckTos = 0;
+
+    this.activeChecked5 = false;
+    this.ckDificultad = 0;
+
+    this.activeChecked6 = false;
+    this.ckFatiga = 0;
+
+    this.activeChecked7 = false;
+    this.ckEscalofrio = 0;
+
+    this.activeChecked8 = false;
+    this.ckPecho = 0;
+
+    this.activeChecked9 = false;
+    this.ckIncapacidad = 0;
+
+    this.totalResults = 0;
 
 
   }
 
-  ninguno() {
 
-    if (!this.ckb10) {
-      this.ckb10 = true;
-      this.ckNinguno = 0;
-    } else {
-
-      this.ckb10 = false;
-
-    }
-    console.log(this.ckb10)
-
-    
-
-    
-
-
-  }
-
-  
   testResult() {
 
-    this.sumResults =
-    this.ckFiebre + this.ckGarganta +
-    this.ckCongestion + this.ckTos +
-    this.ckDificultad + this.ckFatiga +
-    this.ckEscalofrio + this.ckPecho +
-    this.ckDificultad;
+    
 
-    console.log(this.sumResults);
-    this.totalResults = this.sumResults;
 
-    if (this.totalResults >= 60) {
+    this.totalResults =
+      this.ckFiebre + this.ckGarganta +
+      this.ckCongestion + this.ckTos +
+      this.ckDificultad + this.ckFatiga +
+      this.ckEscalofrio + this.ckPecho +
+      this.ckDificultad;
+
+
+
+    console.log(this.totalResults);
+
+
+
+
+    if (this.totalResults > 60) {
 
       Swal.fire({
-        title: 'Cuidado',
+        title: 'ALERTA',
         text: 'Se recomienda hacer prueba del COVID19',
-        icon: 'warning'
+        icon: 'error'
       })
 
       setTimeout(() => {
 
         this.router.navigate(['/info']);
 
-      },2000);
+      }, 2000);
 
-    } else {
+    } else if (this.totalResults > 0 && this.totalResults <= 60) {
 
       Swal.fire({
-        title: 'No hay nada de que preocuparse',
-        text: 'Sigue monitoreando tus sintomas constantemente',
-        icon: 'success'
+        title: 'CUIDADO',
+        text: 'Hasta el momento tus sintomas no son asociados con un posible contagio, Te recomendamos estar en constante monitoreo',
+        icon: 'warning'
 
       })
 
       setTimeout(() => {
-
         this.router.navigate(['/care']);
+      }, 2000);
 
-      },2000);
+    } else if (this.totalResults == 0) {
 
-      
+      Swal.fire({
+        title: 'NO PRESENTAS SINTOMAS',
+        text: 'Actualmente no registras sintomas, Te invitamos a estar en constante monitoreo',
+        icon: 'success'
+      })
 
+      setTimeout(() => {
+        this.router.navigate(['/care']);
+      }, 2000);
     }
-
-
-    
-
   }
 
- 
-
-
-
-
   onSubmit(ref: NgForm) {
-
 
     if (ref.invalid) {
       Object.values(ref.controls).forEach(control => {
@@ -293,17 +326,9 @@ export class SymptomsComponent implements OnInit {
     }
 
     console.log(ref.value);
-
-
-
   }
 
 
-  cerrarSesion() {
-
-    this.auth.logOut();
-    this.router.navigateByUrl('/login');
-
-  }
+  
 
 }

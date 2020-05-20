@@ -2,17 +2,12 @@
 
     <div class="container-fluid p-4">
         <div class="row">
-            <div class="col-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="text-left">
-                    <button [routerLink]="['/welcome']" class="btn btn-danger">
+                    <button [routerLink]="['/symptoms2']" class="btn btn-info">
                         <i class="fas fa-arrow-left"></i>
-                        Volver
                     </button>
-                    <button (click)="cerrarSesion()" [routerLink]="['/welcome']" class="btn btn-danger"
-                        style="float: right;">
-                        <i class="fas fa-sign-out-alt"></i>
-                        Cerrar Sesión
-                    </button>
+                    
                 </div>
             </div>
         </div>
@@ -24,85 +19,94 @@
             <div class="container-login100">
                 <div class="wrap-login100 p-t-50 p-b-50 p-l-50 p-r-50">
                     <span class="login100-form-title p-b-51">
-                        REGISTRAR SINTOMAS
+                        SINTOMAS
                         <i class="fas fa-virus fa-spin"></i>
                     </span>
-                    <small class="text-info">Indica que sintoma(s) estas presentando</small>
+                    <small class="text-info"><strong>Indica que sintoma(s) estas presentando</strong> </small>
                     <br>
                     <br>
                     <div class="contact100-form-checkbox">
-                        <input (click)="fiebre()" type="checkbox" [(ngModel)]="ckb1" class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me" name="fiebre"
-                             required>
+                        <input [(ngModel)]="activeChecked1" (click)="fiebre()" type="checkbox" class="input-checkbox100"
+                            id="ckb1" name="remember-me">
                         <label class="label-checkbox100" for="ckb1">
                             Fiebre
                         </label>
                     </div>
                     <br>
                     <div class="contact100-form-checkbox">
-                        <input (click)="garganta()" class="input-checkbox100" id="ckb2" type="checkbox" name="remember-me" required>
+                        <input [(ngModel)]="activeChecked2" (click)="garganta()" class="input-checkbox100" id="ckb2"
+                            type="checkbox" name="remember-me">
                         <label class="label-checkbox100" for="ckb2">
                             Dolor de garganta
                         </label>
                     </div>
                     <br>
                     <div class="contact100-form-checkbox">
-                        <input (click)="congestion()" class="input-checkbox100" id="ckb3" type="checkbox" name="remember-me" required>
+                        <input [(ngModel)]="activeChecked3" (click)="congestion()" class="input-checkbox100" id="ckb3"
+                            type="checkbox" name="remember-me">
                         <label class="label-checkbox100" for="ckb3">
                             Congestión Nasal
                         </label>
                     </div>
                     <br>
                     <div class="contact100-form-checkbox">
-                        <input (click)="tos()" class="input-checkbox100" id="ckb4" type="checkbox" name="remember-me" required>
+                        <input [(ngModel)]="activeChecked4" (click)="tos()" class="input-checkbox100" id="ckb4"
+                            type="checkbox" name="remember-me">
                         <label class="label-checkbox100" for="ckb4">
                             Tos
                         </label>
                     </div>
                     <br>
                     <div class="contact100-form-checkbox">
-                        <input (click)="dificultad()" class="input-checkbox100" id="ckb5" type="checkbox" name="remember-me" required>
+                        <input [(ngModel)]="activeChecked5" (click)="dificultad()" class="input-checkbox100" id="ckb5"
+                            type="checkbox" name="remember-me">
                         <label class="label-checkbox100" for="ckb5">
                             Difilcultad para Respirar
                         </label>
                     </div>
                     <br>
                     <div class="contact100-form-checkbox">
-                        <input (click)="fatiga()" class="input-checkbox100" id="ckb6" type="checkbox" name="remember-me" required>
+                        <input [(ngModel)]="activeChecked6" (click)="fatiga()" class="input-checkbox100" id="ckb6"
+                            type="checkbox" name="remember-me">
                         <label class="label-checkbox100" for="ckb6">
                             Fatiga
                         </label>
                     </div>
                     <br>
                     <div class="contact100-form-checkbox">
-                        <input (click)="escalofrio()" class="input-checkbox100" id="ckb7" type="checkbox" name="remember-me" required>
+                        <input [(ngModel)]="activeChecked7" (click)="escalofrio()" class="input-checkbox100" id="ckb7"
+                            type="checkbox" name="remember-me">
                         <label class="label-checkbox100" for="ckb7">
                             Escalofrío
                         </label>
                     </div>
                     <br>
                     <div class="contact100-form-checkbox">
-                        <input (click)="pecho()" class="input-checkbox100" id="ckb8" type="checkbox" name="remember-me" required>
+                        <input [(ngModel)]="activeChecked8" (click)="pecho()" class="input-checkbox100" id="ckb8"
+                            type="checkbox" name="remember-me">
                         <label class="label-checkbox100" for="ckb8">
                             Dolor o presion en el pecho
                         </label>
                     </div>
                     <br>
                     <div class="contact100-form-checkbox">
-                        <input (click)="incapacidad()" class="input-checkbox100" id="ckb9" type="checkbox" name="remember-me" required>
+                        <input [(ngModel)]="activeChecked9" (click)="incapacidad()" class="input-checkbox100" id="ckb9"
+                            type="checkbox" name="remember-me">
                         <label class="label-checkbox100" for="ckb9">
                             Incapacidad para hablar o moverse
                         </label>
                     </div>
                     <br>
                     <div class="contact100-form-checkbox">
-                        <input (click)="ninguno()" class="input-checkbox100" id="ckb10" type="checkbox" name="remember-me" required>
+                        <input [(ngModel)]="noneChecked" (click)="disableAllCheckboxes()" class="input-checkbox100"
+                            id="ckb10" type="checkbox" name="remember-me">
                         <label class="label-checkbox100" for="ckb10">
                             Ninguno de los anteriores
                         </label>
                     </div>
 
                     <div class="container-login100-form-btn m-t-17">
-                        <button (click)="testResult()"  class="login100-form-btn" type="submit">
+                        <button (click)="testResult()" class="login100-form-btn" type="submit">
                             CONTINUAR
                         </button>
                     </div>
@@ -111,7 +115,7 @@
             </div>
         </div>
 
-        
+
 
 
 

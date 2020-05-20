@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('userEmail', this.usuario.email);
         }
 
-        this.router.navigateByUrl('/symptoms');
+        this.router.navigateByUrl('/symptoms2');
 
       }, (err) => {
         console.log(err);

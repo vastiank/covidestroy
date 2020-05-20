@@ -1,17 +1,17 @@
 <div class="background" style="overflow-x: hidden; overflow-y: hidden;">
-
+    <!--
     <div class="col-1 mx-auto bg-light" style="float: right;">
         <div class="text-right">
             <img src="../../../assets/LogoIUSH.png" alt="" style="width: 100px; height: auto;">
         </div>
     </div>
+    -->
     <div class="container-fluid p-4">
         <div class="row">
             <div class="col-2">
                 <div class="text-left">
-                    <button [routerLink]="['/welcome']" class="btn btn-danger">
+                    <button id="btnBack" [routerLink]="['/welcome']" class="btn btn-info">
                         <i class="fas fa-arrow-left"></i>
-                        Ir al Home
                     </button>
                 </div>
             </div>
@@ -25,7 +25,7 @@
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90 p-l-10 p-r-10">
                 <div class="text-center">
-                    <i class="fas fa-shield-virus fa-3x" style="color: #281aa1;"></i> <br> <br>
+                    <i class="fas fa-virus fa-spin fa-3x" style="color: #1a76a1;"></i> <br> <br>
                 </div>
                 <form (ngSubmit)="onSubmit( F )" #F="ngForm" class="login100-form validate-form flex-sb flex-w">
 

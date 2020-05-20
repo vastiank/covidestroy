@@ -1,77 +1,332 @@
 <div class="background" style="overflow-x: hidden; overflow-y: hidden;">
 
+  <div class="container-fluid p-4">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-left">
+          <button id="btnBack" [routerLink]="['/welcome']" class="btn btn-info">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </div>
+        <div class="text-center">
+          <h3><strong style="color: white;">Informacion recopilada del MINSALUD</strong><br>
+            <hr>
+            <img src="../../../assets/Logo-MINSALUD.jpg" alt=""
+              style="width: 250px; height: auto; display: block; margin: auto;">
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Limpieza y Desinfeccion-->
+
+  <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><strong class="text-info">Limpieza y desinfección</strong>
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <img src="../../../assets/Limpieza.png" alt="">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal-footer">
+          <a id="download" href="../../../assets/Limpieza-ydesinfeccinenlavivienda.pdf" download="CovidDestroyLimpieza">
+            
+              <div class="col-12">
+                <h6>
+                  <strong>
+                    Descargar
+                  </strong>
+                </h6>
+              </div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Manejo de mascotas -->
+
+  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><strong class="text-info">Manejo de Mascotas</strong> </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <img src="../../../assets/CuidadosMascotas.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="../../../assets/Manejo-cotidianodeanimalescompaa.pdf" download="CovidDestroyMascotas">
+            <div class="col-12">
+              <h6>
+                <strong>
+                  Descargar
+                </strong>
+              </h6>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Entrar y Salir de la vivienda -->
+
+  <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><strong class="text-info">Medidas al entrar y salir de la
+              vivienda</strong> </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <img src="../../../assets/CuidadoSalirYEntrar.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="../../../assets/Medidas-deprevencinalsaliryentraralavivienda2.pdf"
+            download="CovidDestroySalirYEntrar">
+            <div class="col-12">
+              <h6>
+                <strong>Descargar</strong>
+              </h6>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Recomendaciones con el agua -->
+
+  <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><strong class="text-info">Recomendaciones con el agua</strong>
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <img src="../../../assets/CuidadosAgua.png" alt="">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="../../../assets/Recomendaciones-conelagua.pdf" download="CovidDestroyAgua">
+            <div class="col-12">
+              <h6>
+                <strong>
+                  Descargar
+                </strong>
+              </h6>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Vehiculos Particulares y Transporte Publico -->
+  <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><strong class="text-info">Vehiculos Particulares y Transporte
+              Publico</strong> </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <img src="../../../assets/CuidadoVehiculos.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="../../../assets/Medidas-parausuariosdevehculoparticularmotocicletasybicicletas.pdf"
+            download="CovidDestroyVehiculos">
+            <div class="col-12">
+              <h6>
+                <strong>
+                  Descargar
+                </strong>
+              </h6>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Modal Recomendaciones para contener el avance de las infecciones respiratorias -->
+  <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><strong class="text-info">Recomendaciones para contener el
+              avance de las infecciones respiratorias</strong> </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <img src="../../../assets/CuidadosIRA.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="../../../assets/Recomendaciones-paracontenerIRA.pdf" download="CovidDestroyIRA">
+            <div class="col-12">
+              <h6>
+                <strong>
+                  Descargar
+                </strong>
+              </h6>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div class="container p-5">
     <div class="row">
       <div>
-
-        
         <div class="card-deck">
           <div data-aos="zoom-in" class="card animated fadeInDown">
             <img src="../../../assets/limpieza.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Limpieza y Desinfección</h5>
-              <p class="card-text">texto</p>
+              <h5 class="card-title text-center">Limpieza y Desinfección</h5>
+              <p class="card-text text-center" data-toggle="modal" data-target="#exampleModal1"
+                style="cursor: pointer;">
+                <span class="badge badge-info">Ver Recomendaciones</span>
+              </p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
             </div>
           </div>
           <div data-aos="zoom-in" class="card animated fadeInDown">
             <img src="../../../assets/mascotas.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Manejo de mascotas</h5>
-              <p class="card-text">text</p>
+              <h5 class="card-title text-center">Manejo de mascotas</h5>
+              <p class="card-text text-center" data-toggle="modal" data-target="#exampleModal2">
+                <span class="badge badge-info">Ver Recomendaciones</span>
+              </p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
             </div>
           </div>
         </div>
         <br>
+
         <div data-aos="zoom-in" class="card-deck">
           <div class="card animated fadeInDown">
             <img src="../../../assets/familia.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Medidas al entrar y salir de la vivienda</h5>
-              <p class="card-text">text</p>
+              <h5 class="card-title text-center">Medidas al entrar y salir de la vivienda</h5>
+              <p class="card-text text-center" data-toggle="modal" data-target="#exampleModal3">
+                <span class="badge badge-info">Ver Recomendaciones</span>
+              </p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
             </div>
           </div>
           <div class="card animated fadeInDown">
             <img src="../../../assets/water.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Recomendaciones con el agua</h5>
-              <p class="card-text">text</p>
+              <h5 class="card-title text-center">Recomendaciones con el agua</h5>
+              <p class="card-text text-center" data-toggle="modal" data-target="#exampleModal4">
+                <span class="badge badge-info">Ver Recomendaciones</span>
+              </p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
             </div>
           </div>
         </div>
         <br>
+
         <div data-aos="zoom-in" class="card-deck">
           <div class="card animated fadeInDown">
             <img src="../../../assets/limpieza-vehiculo.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Vehiculos particulares y transporte publico</h5>
-              <p class="card-text">text</p>
+              <h5 class="card-title text-center">Vehiculos particulares y transporte publico</h5>
+              <p class="card-text text-center" data-toggle="modal" data-target="#exampleModal5">
+                <span class="badge badge-info">Ver Recomendaciones</span>
+              </p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
             </div>
           </div>
 
           <div class="card animated fadeInDown">
             <img src="../../../assets/cuidados.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Recomendaciones para contener el avance de las infecciones respiratorias</h5>
-              <p class="card-text">text</p>
+              <h5 class="card-title text-center">Recomendaciones para contener el avance de las infecciones
+                respiratorias</h5>
+              <p class="card-text text-center" data-toggle="modal" data-target="#exampleModal6">
+                <span class="badge badge-info">Ver Recomendaciones</span>
+              </p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
             </div>
           </div>
         </div>
@@ -80,7 +335,7 @@
 
 
       </div>
-      
+
     </div>
   </div>
 </div>

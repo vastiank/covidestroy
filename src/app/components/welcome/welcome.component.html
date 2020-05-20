@@ -1,16 +1,18 @@
 <div class="background">
-
-    <div class="col-1 mx-auto bg-light" style="float: right; margin: 10px; right: 10px;">
+    <!--
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 mx-auto bg-light" style="float: right; margin: 10px; right: 10px;">
         <div class="text-right">
             <img src="https://www.iush.edu.co/assets/svg/Logo-IUSH.svg" alt="" style="width: 100px; height: auto;">
         </div>
     </div>
+    -->
 
     <div class="container-fluid p-4">
         <div class="row">
-            <div class="col-2">
-                <div class="text-left">
-                    <button [routerLink]="['/logIn']" *ngIf="flagUserLogIn" class="btn btn-danger"
+            
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div>
+                    <button id="btn" [routerLink]="['/logIn']" *ngIf="flagUserLogIn" class="btn btn-info"
                         style="float: right;">
                         <i class="fas fa-sign-out-alt"></i>
                         Iniciar Sesión
@@ -18,19 +20,14 @@
                     <button (click)="cerrarSesion()" *ngIf="flagUserSignOut" class="btn btn-danger"
                         style="float: right;">
                         <i class="fas fa-sign-out-alt"></i>
-                        Cerrar Sesión
+                        Salir
                     </button>
                 </div>
             </div>
-            
+
         </div>
 
     </div>
-
-
-    
-    
-    
     <div class="limiter animated fadeInLeft">
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90 p-l-10 p-r-10">

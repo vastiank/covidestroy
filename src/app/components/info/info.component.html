@@ -1,10 +1,12 @@
 <div class="background">
+
+
   <div class="container-fluid p-4">
     <div class="col-2">
       <div class="text-left">
-        <button [routerLink]="['/welcome']" class="btn btn-danger">
+        <button [routerLink]="['/welcome']" class="btn btn-info">
           <i class="fas fa-arrow-left"></i>
-          Volver
+          
         </button>
       </div>
     </div>
@@ -12,7 +14,7 @@
   
   <div class="container p-5 animated fadeInLeft">
     <div class="row">
-      <div class="card mt-2 p-5">
+      <div class="card mt-2 p-5" style="background-color: rgba(255, 255, 255, 0.856);">
 
         <div class="col text-center">
 
@@ -21,11 +23,16 @@
             INFORMACION
 
           </span>
-          <hr>
+          
 
-          <h3 class="text-secondary">En caso de presentar diagnostico positivo de acuerdo a nuestros analisis <br>
+          <h3 class="text-secondary">En caso de presentar diagnostico de <strong class="text-danger">ALERTA</strong>  de acuerdo a los resultados <br>
             Comunicate con las siguientes lineas:</h3>
 
+          <br>
+          <hr>
+          
+          <br>
+          <img src="../../../assets/stayhome.jpeg" alt="" style="width: 150px; height: auto;">
           <br>
           <strong>Linea de atencion<br></strong>
           <i class="fas fa-mobile-alt"></i> <br>

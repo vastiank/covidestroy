@@ -12,4 +12,9 @@ export class CareComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  careArrays:any[] = [{
+    name: 'juan',
+    lastname: 'alvarez'
+  }];
+
 }

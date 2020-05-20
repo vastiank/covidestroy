@@ -133,6 +133,8 @@ iframe {
 .limiter {
   width: 100%;
   margin: 0 auto;
+  align-content: center;
+  position: relative;
 }
 
 .container-login100 {
@@ -156,7 +158,7 @@ iframe {
 
 .wrap-login100 {
   width: 390px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.774);
   border-radius: 10px;
   position: relative;
 }
@@ -270,7 +272,7 @@ iframe {
 .label-checkbox100 {
   font-family: Ubuntu-Regular;
   font-size: 16px;
-  color: #999999;
+  color: #281aa1;
   line-height: 1.2;
 
   display: block;

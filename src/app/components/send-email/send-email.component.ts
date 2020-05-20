@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { Observable } from 'rxjs';
 import { UsuarioModel } from 'src/app/models/usuario.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-send-email',
@@ -10,7 +11,7 @@ import { UsuarioModel } from 'src/app/models/usuario.model';
 })
 export class SendEmailComponent implements OnInit {
 
-  constructor(private auth:AuthService) { }
+  constructor(private auth:AuthService, private route:Router) { }
 
   usuario:UsuarioModel;
 
@@ -27,9 +28,12 @@ export class SendEmailComponent implements OnInit {
       console.log(this.usuario.email);
   
       this.emailAddress = this.usuario.email;
-
-      
     })
+
+    
+
+
+
   }
 
 }
